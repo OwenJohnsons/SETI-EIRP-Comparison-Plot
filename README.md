@@ -2,7 +2,7 @@
 
 This package provides a command-line tool and Python library for plotting historical and modern SETI survey limits in the EIRP–rarity parameter space, as seen in most recent SETI survey papers. As shown below! 
 
-![Example SETI EIRP-Rarity Plot](SETI-EIRP-limits-Comp.png)
+![Example SETI EIRP-Rarity Plot](SETI-EIRP-limits-Example.png)
 
 ## Installation
 
@@ -35,7 +35,7 @@ options:
   --no-show             Do not display the plot interactively.
   ```
 
-# Calculating or adding new surveys via `.yaml`
+## Calculating or adding new surveys via `.yaml`
 
 There are two means to add survey data to the plot, either by calculating the EIRP and rarity values manually, or by using the built-in calculator. 
 
