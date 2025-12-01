@@ -1,0 +1,353 @@
+surveys:
+
+  # ============================
+  # LOFAR
+  # ============================
+  - name: "Johnson (2023)"
+    telescope: "LOFAR"
+    N_stars: 900000
+    band_Hz: 55000000.0
+    central_freq_Hz: 62000000.0
+    dish_diam_m: 22000.0
+    dish_Tsys_K: 25.0
+    aperture_efficiency: 0.75
+    SNR_threshold: 10.0
+    spectral_resolution_Hz: 1.0
+    obs_time_s: 600.0
+    max_distance_ly: 6638.74882512
+    instantaneous_bandwidth_Hz: 40000000.0
+    SEFD_Jy: 560.0
+    npol: 2
+    narrow: true
+    marker: "8"
+    color: "red"
+    markersize: 20
+
+  - name: "Suresh (2023)"
+    year: 2023
+    telescope: "FAST"
+    point_type: "fixed"
+    logEIRP: 18.21
+    logRarity: -5.57
+    marker: "2"
+    color: "green"
+    markersize: 15
+
+  - name: "Gajjar (2021 - GBT)"
+    year: 2021
+    telescope: "GBT"
+    point_type: "fixed"
+    logEIRP: 17.69
+    logRarity: -5.61
+    marker: "d"
+    color: "blue"
+    markersize: 10
+
+  - name: "Gajjar (2021 - Parkes)"
+    year: 2021
+    telescope: "Parkes"
+    point_type: "fixed"
+    logEIRP: 18.59
+    logRarity: -8.09
+    marker: "d"
+    color: "orange"
+    markersize: 10
+
+  # ============================
+  # Price et al. 2019  GBT
+  # ============================
+  - name: "Price (2019 - GBT)"
+    telescope: "GBT"
+    N_stars: 883
+    band_Hz: 755000000.0       # (1.21.025 + 1.9251.34) GHz
+    central_freq_Hz: 1500000000.0
+    dish_diam_m: 100.0
+    dish_Tsys_K: 20.0
+    aperture_efficiency: 0.72
+    SNR_threshold: 10.0
+    spectral_resolution_Hz: 3.0
+    obs_time_s: 300.0
+    max_distance_pc: 50.0
+    instantaneous_bandwidth_Hz: 900000000.0
+    npol: 2
+    narrow: true
+    marker: "h"
+    color: "#440154"
+    markersize: 18
+
+
+  # ============================
+  # Price et al. 2019  Parkes
+  # ============================
+  - name: "Price (2019 - Parkes)"
+    telescope: "Parkes"
+    N_stars: 195
+    band_Hz: 870000000.0       # (3.444  2.574) GHz
+    central_freq_Hz: 3000000000.0
+    dish_diam_m: 64.0
+    dish_Tsys_K: 35.0
+    aperture_efficiency: 0.7
+    SNR_threshold: 10.0
+    spectral_resolution_Hz: 3.0
+    obs_time_s: 300.0
+    max_distance_pc: 50.0
+    instantaneous_bandwidth_Hz: 900000000.0
+    npol: 2
+    narrow: true
+    marker: "h"
+    color: "#690182"
+    markersize: 18
+
+
+  # ============================
+  # Enriquez 2017 (BL GBT L-band)
+  # ============================
+  - name: "Enriquez 2017 (BL GBT)"
+    telescope: "GBT"
+    N_stars: 692
+    band_Hz: 660000000.0
+    central_freq_Hz: 1500000000.0
+    dish_diam_m: 100.0
+    dish_Tsys_K: 20.0
+    aperture_efficiency: 0.72
+    SNR_threshold: 25.0
+    spectral_resolution_Hz: 3.0
+    obs_time_s: 300.0
+    max_distance_pc: 50.0
+    instantaneous_bandwidth_Hz: 800000000.0
+    npol: 2
+    narrow: true
+    marker: "h"
+    color: "orange"
+    markersize: 18
+
+
+  # ============================
+  # Gray & Mooley 2017 (VLA)  L-band
+  # ============================
+  - name: "Gray & Mooley (2017)" # 1.4 GHz
+    point_type: "fixed"
+    logEIRP: 21.26219606
+    logRarity: -8.854860139
+    marker: "o"
+    color: "#303b6b"
+    markersize: 18
+    edgecolor: "white"
+
+  - name: "Gray & Mooley (2017)" # 8.4 GHz
+    point_type: "fixed"
+    logEIRP: 21.113892404
+    logRarity: -7.17271357
+    marker: "o"
+    color: "#505a9b"
+    markersize: 18
+    edgecolor: "white"
+
+
+  # ============================
+  # ATA  Harp 2016
+  # ============================
+  - name: "Harp (2016) a,b"
+    point_type: "fixed"
+    logEIRP: 16.948273077
+    logRarity: -2.017033339
+    marker: "^"
+    color: "#a1c625"
+    markersize: 18
+
+  - name: "Harp (2016) a,b"
+    point_type: "fixed"
+    logEIRP: 16.738633362
+    logRarity: -2.902361195
+    marker: "^"
+    color: "#a1c625"
+    markersize: 18
+
+  - name: "Harp (2016) c"
+    point_type: "fixed"
+    logEIRP: 14.582677942
+    logRarity: -2.279420499
+    marker: "^"
+    color: "#a1c625"
+    markersize: 18
+
+  - name: "Harp (2016) d"
+    point_type: "fixed"
+    logEIRP: 15.027869855
+    logRarity: -2.602385018
+    marker: "8"
+    color: "#a1c625"
+    markersize: 18
+
+  - name: "Harp (2016) All*"
+    point_type: "fixed"
+    logEIRP: 16.948273076
+    logRarity: -3.174197307
+    marker: "^"
+    color: "white"
+    edgecolor: "#a1c625"
+    markersize: 22
+
+  # ============================
+  # Siemion 2013 (GBT)
+  # ============================
+  - name: "Siemion 2013 (GBT)"
+    telescope: "GBT"
+    N_stars: 86
+    band_Hz: 670000000.0        # 800e6 − 130e6
+    central_freq_Hz: 1500000000.0
+    dish_diam_m: 100.0
+    dish_Tsys_K: 20.0
+    aperture_efficiency: 0.72
+    SNR_threshold: 25.0
+    spectral_resolution_Hz: 1.0
+    obs_time_s: 300.0
+    max_distance_pc: 1100.0
+    instantaneous_bandwidth_Hz: 800000000.0
+    npol: 2
+    narrow: true
+    marker: ">"
+    color: "#26828e"
+    markersize: 18
+
+  # ============================
+  # Phoenix
+  # ============================
+  - name: "Phoenix"
+    point_type: "fixed"
+    logEIRP: 13.945585966
+    logRarity: -1.854840692
+    marker: "<"
+    color: "#31688e"
+    markersize: 18
+    edgecolor: "white"
+
+  - name: "Phoenix"
+    point_type: "fixed"
+    logEIRP: 13.945585966
+    logRarity: -2.290498133
+    marker: "<"
+    color: "#31688e"
+    markersize: 18
+    edgecolor: "white"
+
+  - name: "Phoenix"
+    point_type: "fixed"
+    logEIRP: 14.741290314
+    logRarity: -1.878717498
+    marker: "<"
+    color: "#31688e"
+    markersize: 18
+    edgecolor: "white"
+
+  - name: "Phoenix"
+    point_type: "fixed"
+    logEIRP: 14.741290314
+    logRarity: -1.742756081
+    marker: "<"
+    color: "#31688e"
+    markersize: 18
+    edgecolor: "white"
+
+  - name: "Phoenix"
+    point_type: "fixed"
+    logEIRP: 14.741290314
+    logRarity: -2.223395259
+    marker: "<"
+    color: "#31688e"
+    markersize: 18
+    edgecolor: "white"
+
+  - name: "Phoenix All*"
+    point_type: "fixed"
+    logEIRP: 14.741290312
+    logRarity: -2.752912273
+    marker: "<"
+    color: "white"
+    edgecolor : "#31688e"
+    markersize: 22
+
+  # ============================
+  # Horowitz & Sagan 1993 (META)
+  # ============================
+  - name: "Horowitz & Sagan (1993)"
+    telescope: "HCRO 26 m"
+    N_stars: 1.0e7
+    band_Hz: 1200000.0
+    central_freq_Hz: 1420000000.0
+    dish_diam_m: 26.0
+    dish_Tsys_K: 85.0
+    aperture_efficiency: 0.5
+    SNR_threshold: 30.0
+    spectral_resolution_Hz: 0.05
+    obs_time_s: 20.0
+    max_distance_pc: 700.0
+    instantaneous_bandwidth_Hz: 400000.0
+    npol: 2
+    narrow: false
+    marker: "o"
+    color: "#add8e6"
+    markersize: 18
+
+  # ============================
+  # Valdes & Freitas 1986
+  # ============================
+  - name: "Valdes (1986)"
+    point_type: "fixed"
+    logEIRP: 13.252271157
+    logRarity: 1.361102430
+    marker: "s"
+    color: "pink"
+    markersize: 18
+    markersize: 18
+    telescope: "4.883 kHz"
+
+  - name: "Valdes (1986)"
+    point_type: "fixed"
+    logEIRP: 12.349634919
+    logRarity: 3.210416001
+    marker: "s"
+    color: "pink"
+    markersize: 18
+
+  # ============================
+  # Tarter 1980 (NRAO 91 m)
+  # ============================
+  - name: "Tarter (1980)"
+    telescope: "NRAO 91m"
+    N_stars: 201
+    band_Hz: 1440000.0         # 360e3 * 4
+    central_freq_Hz: 1666000000.0
+    dish_diam_m: 91.0
+    dish_Tsys_K: 70.0
+    aperture_efficiency: 0.6
+    SNR_threshold: 12.0
+    spectral_resolution_Hz: 5.5
+    obs_time_s: 45.0
+    max_distance_pc: 25.0
+    instantaneous_bandwidth_Hz: 360000.0
+    npol: 2
+    narrow: true
+    marker: "v"
+    color: "#1f9e89"
+    markersize: 18
+
+  # ============================
+  # Verschuur 1973
+  # ============================
+  - name: "Verschuur (1973)"
+    point_type: "fixed"
+    logEIRP: 12.583763323
+    logRarity: 0.947948010
+    marker: "s"
+    color: "#efda21"
+    markersize: 18
+    telescope: "140 ft"
+
+  - name: "Verschuur (1973)"
+    point_type: "fixed"
+    logEIRP: 11.74707654
+    logRarity: 2.899007561
+    marker: "s"
+    color: "#efda21"
+    markersize: 18
