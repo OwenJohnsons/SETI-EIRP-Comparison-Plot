@@ -39,7 +39,7 @@ surveys:
     color: "red"
     markersize: 25
 
-  - name: "Tao (2022) and Luan (2023)"
+  - name: "Tao (2022) & Luan (2023)"
     year: 2022
     telescope: "FAST"
     point_type: "fixed"

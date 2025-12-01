@@ -182,6 +182,24 @@ def compute_survey_limits(survey):
 # ===============================
 # --- Plotting ---
 # ===============================
+def check_latex():
+    """
+    Returns True if LaTeX is installed and functional.
+    Works for Matplotlib 3.4+ and modern versions without checkdep_usetex.
+    """
+    import io
+
+    try:
+        fig, ax = plt.subplots()
+        ax.text(0.5, 0.5, r"$\alpha+\beta=1$", fontsize=8)
+        buf = io.BytesIO()
+        fig.savefig(buf, format="pdf")
+        plt.close(fig)
+        print("LaTeX is available for plotting.... using LaTeX!")
+        return True
+    except Exception:
+        print("LaTeX is not available for plotting.")
+        return False
 
 def plot_surveys(yaml_path, output="SETI_limits_comparison.pdf", publish=False, twocolumn=False, noshow=False):
     """
@@ -189,9 +207,17 @@ def plot_surveys(yaml_path, output="SETI_limits_comparison.pdf", publish=False, 
     """
     surveys = load_survey_yaml(yaml_path)
     
+   
     if publish:
         import scienceplots
-        plt.style.use(['science', 'ieee', 'no-latex'])
+        
+        latex = check_latex()
+        if latex:
+            plt.style.use(['science', 'ieee'])
+        else:
+            latex = False
+            plt.style.use(['science', 'ieee', 'no-latex'])
+
     
     plt.figure(figsize=(16 if not twocolumn else 9, 9))
 
@@ -203,6 +229,13 @@ def plot_surveys(yaml_path, output="SETI_limits_comparison.pdf", publish=False, 
         if survey.get("point_type") == "fixed":
             label = survey["name"] if survey["name"] not in used_names else None
             used_names.add(survey["name"])
+            
+            if isinstance(label, str) and latex:
+                label = (
+                    label.replace("\\&", "&")   
+                        .replace("&", "\\&")  
+                )
+            
             edgecolor = survey.get("edgecolor", None)
 
             plt.plot(
@@ -212,7 +245,7 @@ def plot_surveys(yaml_path, output="SETI_limits_comparison.pdf", publish=False, 
                 color=survey.get("color", "k"),
                 markersize=survey.get("markersize", 16),
                 markeredgecolor=edgecolor if edgecolor is not None else None,
-                label=label
+                label = label
             )
 
             continue
@@ -225,6 +258,12 @@ def plot_surveys(yaml_path, output="SETI_limits_comparison.pdf", publish=False, 
         # Only label first time name appears
         label = survey["name"] if survey["name"] not in used_names else None
         used_names.add(survey["name"])
+        
+        if isinstance(label, str) and latex:
+            label = (
+                label.replace("\\&", "&")   
+                    .replace("&", "\\&")  
+                )
 
         plt.plot(
             [logE],
@@ -273,7 +312,24 @@ def plot_surveys(yaml_path, output="SETI_limits_comparison.pdf", publish=False, 
     plt.ylim(-13, 5)
     plt.xticks(fontsize=18)
     plt.yticks(fontsize=18)
-    plt.legend(loc=1, prop={"size": 14 if not twocolumn else 6}, labelspacing=1, frameon=True)
+    # plt.legend(loc=1, prop={"size": 14 if not twocolumn else 6}, labelspacing=1, frameon=True)
+    
+    # Expand legend across full width and increase spacing
+    legend = plt.legend(
+        loc='upper center',
+        bbox_to_anchor=(0.5, -0.10),
+        ncol=6,
+        frameon=False,
+        labelspacing=1,
+        fontsize=12,
+        columnspacing=2.0,
+        handlelength=2.0,
+    )
+
+    legend._legend_box.align = "center"
+
+
+    plt.subplots_adjust(bottom=0.28) 
 
     plt.tight_layout()
     plt.savefig(output, format="pdf", dpi=300)
