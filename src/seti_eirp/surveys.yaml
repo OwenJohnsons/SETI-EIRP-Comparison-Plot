@@ -1,4 +1,53 @@
 surveys:
+  - name: "Huang (2025)"
+    year: 2025
+    telescope: "FAST"
+    point_type: "fixed"
+    logEIRP: 15.492957746478872
+    logRarity: -6.595744680851064 
+    marker: "o"
+    color: "cyan"
+    markersize: 10
+
+  - name: "Luan (2025)"
+    year: 2025
+    telescope: "FAST"
+    point_type: "fixed"
+    logEIRP: 8.7887
+    logRarity: -0.04
+    marker: "d"
+    color: "lightpink"
+    markersize: 10
+
+  - name: "Painter (2025 - GBT X)"
+    year: 2025
+    telescope: "GBT"
+    point_type: "fixed"
+    logEIRP: 12.47887323943662
+    logRarity: -2.8510638297872344
+    marker: "s"
+    color: "purple"
+    markersize: 10
+
+  - name: "Choza (2024 - GBT L)"
+    year: 2024
+    telescope: "GBT"
+    point_type: "fixed"
+    logEIRP: 24.366197183098592
+    logRarity: -12.51063829787234
+    marker: "."
+    color: "red"
+    markersize: 25
+
+  - name: "Tao (2022) and Luan (2023)"
+    year: 2022
+    telescope: "FAST"
+    point_type: "fixed"
+    logEIRP: 9.126760563380282
+    logRarity: -1.1063829787234027
+    marker: "d"
+    color: "lime"
+    markersize: 10
 
   # ============================
   # LOFAR
@@ -21,7 +70,7 @@ surveys:
     narrow: true
     marker: "8"
     color: "red"
-    markersize: 20
+    markersize: 15
 
   - name: "Suresh (2023)"
     year: 2023
