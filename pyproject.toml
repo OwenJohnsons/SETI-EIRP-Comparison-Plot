@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seti-eirp"
+version = "0.1.0"
+description = "A tool for comparing SETI survey EIRP and transmitter rarity."
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "pyyaml",
+    "astropy",
+    "scienceplots"
+]
+
+[project.scripts]
+seti-eirp = "seti_eirp.main:main"
