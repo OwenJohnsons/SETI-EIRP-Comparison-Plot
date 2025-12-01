@@ -23,6 +23,18 @@ seti-eirp --no-show
 ```
 This will generate a plot using the default `surveys.yaml` file included in the package, and save it in the current working directory without displaying it. To see further more basic options, run `seti-eirp -h`.
 
+```
+options:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Input YAML file with survey definitions (default: surveys.yaml)
+  -o OUTPUT, --output OUTPUT
+                        Output filename for the plot (default: SETI-EIRP-limits-Comp.pdf)
+  -pub, --publish       Format the plot for publication using scienceplots.
+  --twocolumn           Format the plot for two-column layout.
+  --no-show             Do not display the plot interactively.
+  ```
+
 # Calculating or adding new surveys via `.yaml`
 
 There are two means to add survey data to the plot, either by calculating the EIRP and rarity values manually, or by using the built-in calculator. 
