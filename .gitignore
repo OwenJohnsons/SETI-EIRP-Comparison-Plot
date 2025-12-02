@@ -1,0 +1,4 @@
+*.pdf
+/src/seti_eirp.egg-info/
+src/__pycache__/
+src/seti_eirp/__pycache__/
