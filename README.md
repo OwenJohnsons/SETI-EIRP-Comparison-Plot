@@ -1,4 +1,5 @@
 # SETI-EIRP Comparison Plot Generator 👽📡
+[[![DOI](https://img.shields.io/badge/DOI-10.1234/abcd.efgh-blue.svg)](https://doi.org/10.1234/abcd.efgh)](https://doi.org/10.5281/zenodo.17789734)
 
 This package provides a command-line tool and Python library for plotting historical and modern SETI survey limits in the EIRP–rarity parameter space, as seen in most recent SETI survey papers. As shown below! 
 
