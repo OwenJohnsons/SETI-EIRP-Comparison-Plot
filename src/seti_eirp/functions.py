@@ -217,6 +217,8 @@ def plot_surveys(yaml_path, output="SETI_limits_comparison.pdf", publish=False, 
         else:
             latex = False
             plt.style.use(['science', 'ieee', 'no-latex'])
+    else:
+        latex = False
 
     
     plt.figure(figsize=(16 if not twocolumn else 9, 9))
